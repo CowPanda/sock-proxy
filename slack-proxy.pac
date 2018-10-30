@@ -8,9 +8,8 @@ function FindProxyForURL(url, host) {
         shExpMatch(host, "*.slack-edge.com") ||
         shExpMatch(host, "*.slack-core.com") ||
         shExpMatch(host, "*.slack-redir.net")) {
-        // Use SOCK proxy, or fall back to a DIRECT traffic.
-        // ssh -D 8000 [user]@[server]
-        return "SOCKS 127.0.0.1:8000; DIRECT";
+ 
+        return "SOCKS 127.0.0.1:1080; DIRECT";
     }
 
     return "DIRECT";
